@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notícias - F1 Fan Zone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" sizes="16x16">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+    body {
+      background-color: #0e0e0e;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background-color: #d90429;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    nav {
+      background: #1a1a1a;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      gap: 30px;
+    }
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #ff453a;
+    }
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 69, 58, 0.3);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(255, 69, 58, 0.6);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-content h3 {
+      color: #ff453a;
+      margin-bottom: 15px;
+    }
+    .card-content p {
+      flex-grow: 1;
+      font-size: 0.9em;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .card-content a {
+      text-align: right;
+      color: #ff453a;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .card-content a:hover {
+      color: #ff6f5e;
+    }
+    footer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 20px;
+      color: #aaa;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>F1 Fan Zone - Notícias</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="ranking.html">Ranking</a>
+    <a href="cadastro.html">Sair</a>
+  </nav>
+
+  <main>
+    <article class="card">
+      <img src="circuito.png" alt="GP de Mônaco" />
+      <div class="card-content">
+        <h3>GP de Mônaco: Vettel surpreende no pódio</h3>
+        <p>O experiente piloto alemão conquistou uma inesperada terceira posição na lendária pista de Monte Carlo, empolgando os fãs ao redor do mundo.</p>
+        <a href="#">Leia mais →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="Ferrari.jpg" alt="Carro vermelho Ferrari" />
+      <div class="card-content">
+        <h3>Ferrari anuncia atualizações para o próximo GP</h3>
+        <p>A Scuderia revelou novidades aerodinâmicas que prometem melhorar o desempenho dos carros nas próximas corridas da temporada.</p>
+        <a href="#">Leia mais →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="pitstop.png" alt="Pit stop da equipe" />
+      <div class="card-content">
+        <h3>Mercedes aposta em estratégias ousadas para 2025</h3>
+        <p>A equipe alemã investe em novas táticas de pit stop para recuperar terreno na disputa pelo campeonato mundial.</p>
+        <a href="#">Leia mais →</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="ultrapassagem.jpg" alt="Ultrapassagem emocionante" />
+      <div class="card-content">
+        <h3>Ultrapassagem do ano: Verstappen vs Leclerc</h3>
+        <p>Relembre o momento que marcou a temporada 2025 com uma das disputas mais emocionantes da história recente da F1.</p>
+        <a href="#">Leia mais →</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 F1 Fan Zone | Feito por fãs, para fãs. 🏁
+  </footer>
+</body>
+</html>

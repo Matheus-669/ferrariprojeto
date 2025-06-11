@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Área do Fã - F1 Fan Zone</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" sizes="16x16">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+    body {
+      background-color: #111;
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #ff453a;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 1px 1px 10px #ff453aaa;
+    }
+    .welcome-msg {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+    section {
+      margin-bottom: 50px;
+      background: #222;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #ff453aaa;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 25px;
+      color: #eee;
+      font-size: 1.1rem;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a.btn {
+      display: inline-block;
+      background-color: #ff453a;
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px #ff453aaa;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 20px;
+    }
+    a.btn:hover {
+      background-color: #d3372b;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    .news-list {
+      max-height: 180px;
+      overflow-y: auto;
+      padding-right: 10px;
+      border-right: 2px solid #ff453a;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bem-vindo à Área do Fã!</h1>
+  <p class="welcome-msg">Obrigado por se cadastrar. Aqui você tem acesso exclusivo a <a href="#ultimasnoticias" class="btn"> últimas notícias</a> , <a href="#quizrapido" class="btn">Quiz Rápido</a> , <a href="#forum" class="btn">Participe do Fórum</a> .</p>
+
+  <section>
+    <h2 id="ultimasnoticias">Últimas Notícias</h2>
+    <div class="news-list">
+      <ul>
+        <li>Verstappen vence GP do Canadá em corrida emocionante!</li>
+        <li>Ferrari apresenta nova atualização para o carro 2025.</li>
+        <li>GP de Mônaco terá festa especial para fãs com acesso VIP.</li>
+        <li>Lewis Hamilton anuncia projeto para incentivar jovens pilotos.</li>
+        <li>Equipe Mercedes reforça parceria com tecnologia sustentável.</li>
+      </ul>
+    </div>
+    <a href="ranking.html" class="btn">Confira o Ranking Atual</a>
+  </section>
+
+  <section>
+    <h2 id="quizrapido">Quiz Rápido</h2>
+    <p>Teste seus conhecimentos sobre Fórmula 1!</p>
+    <ol>
+      <li>Quem detém o recorde de mais campeonatos mundiais?</li>
+      <li>Qual foi o primeiro GP da temporada 2025?</li>
+      <li>Qual piloto é conhecido como "The Iceman"?</li>
+      <li>Qual equipe venceu o campeonato de construtores em 2024?</li>
+      <li>Em qual circuito ocorre o GP de Mônaco?</li>
+    </ol>
+    <a href="https://www.formula1.com/en/toolbar/quiz.html" target="_blank" rel="noopener noreferrer" class="btn">Responder Quiz Oficial</a>
+  </section>
+
+  <section>
+    <h2 id="forum">Participe do Fórum</h2>
+    <p>Troque ideias, compartilhe palpites e faça amigos que também amam a Fórmula 1.</p>
+    <a href="https://www.reddit.com/r/formula1/" target="_blank" rel="noopener noreferrer" class="btn">Entrar no Fórum do Reddit F1</a>
+  </section>
+
+  <footer>
+    &copy; 2025 F1 Fan Zone | Conteúdo exclusivo para fãs cadastrados.
+  </footer>
+</body>
+</html>
