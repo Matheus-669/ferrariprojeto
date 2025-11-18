@@ -6,11 +6,13 @@
   <title>Cadastro & Login - F1 Fan Zone</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.ico" sizes="16x16">
+
   <style>
     * {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Orbitron', sans-serif;
     }
+
     body {
       background: linear-gradient(135deg, #d90429 0%, #6b0000 100%);
       color: #fff;
@@ -21,12 +23,14 @@
       justify-content: center;
       padding: 40px 20px;
     }
+
     h1 {
       margin-bottom: 30px;
       font-size: 3rem;
       text-align: center;
       text-shadow: 1px 1px 8px #000;
     }
+
     .container {
       background: #1a1a1a;
       border-radius: 20px;
@@ -35,6 +39,7 @@
       width: 100%;
       box-shadow: 0 0 20px #ff453acc;
     }
+
     label {
       display: block;
       margin-top: 20px;
@@ -42,6 +47,7 @@
       font-size: 1.1rem;
       color: #ff453a;
     }
+
     input[type="text"], input[type="email"], input[type="password"] {
       width: 100%;
       padding: 12px 15px;
@@ -51,6 +57,7 @@
       font-size: 1rem;
       outline: none;
     }
+
     .btn {
       margin-top: 30px;
       width: 100%;
@@ -65,6 +72,7 @@
       transition: background-color 0.3s ease, transform 0.2s ease;
       box-shadow: 0 6px 15px #ff453aaa;
     }
+
     a.btn {
       text-align: center;
       width: 20%;
@@ -79,33 +87,99 @@
       box-shadow: 0 5px 15px #ff453aaa;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
+
     .btn:hover {
       background-color: #d3372b;
       transform: scale(1.05);
     }
+
     .switch {
       margin-top: 20px;
       text-align: center;
       font-size: 0.95rem;
     }
+
     .switch a {
       color: #ff453a;
       text-decoration: none;
       font-weight: 600;
       cursor: pointer;
     }
+
     .switch a:hover {
       text-decoration: underline;
     }
+
     footer {
       margin-top: 50px;
       color: #aaa;
       font-size: 0.9rem;
     }
+
+
+  
+
+    
+    ul.minilista {
+      margin-top: 40px;
+      background: #111;
+      padding: 15px 25px;
+      border-radius: 10px;
+      list-style: square;
+      border: 1px solid #ff453a;
+    }
+    ul.minilista li {
+      margin: 6px 0;
+      color: #ffb3a8;
+    }
+
+    /* formatação de tabela */
+    table.minitabela {
+      margin-top: 25px;
+      width: 100%;
+      border-collapse: collapse;
+      background: #111;
+      border: 1px solid #ff453a;
+    }
+    table.minitabela th, table.minitabela td {
+      padding: 10px;
+      border: 1px solid #ff453a;
+      text-align: center;
+      color: #ffb3a8;
+    }
+    table.minitabela th {
+      background: #ff453a33;
+    }
+
+    /* media query */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .container {
+        max-width: 90%;
+      }
+    }
+
+    /* media print */
+    @media print {
+      body {
+        background: #fff !important;
+        color: #000;
+      }
+      .container, button, a.btn {
+        box-shadow: none !important;
+        background: #fff !important;
+        color: #000 !important;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <h1>Cadastro & Login</h1>
+
   <div class="container" id="form-cadastro">
     <form action="fan.html" method="get">
       <label for="nome">Nome Completo</label>
@@ -135,7 +209,20 @@
     <p class="switch">Não tem uma conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se aqui</a></p>
   </div>
 
-    <a href="index.html" class="btn">Voltar para Início</a>
+  <a href="index.html" class="btn">Voltar para Início</a>
+
+  <!-- Mini lista e tabela (adições necessárias) -->
+  <ul class="minilista">
+    <li>Comunidade ativa de fãs</li>
+    <li>Conteúdos exclusivos</li>
+    <li>Notícias atualizadas</li>
+  </ul>
+
+  <table class="minitabela">
+    <tr><th>Plano</th><th>Valor</th></tr>
+    <tr><td>Padrão</td><td>Grátis</td></tr>
+    <tr><td>Premium</td><td>R$ 9,90</td></tr>
+  </table>
 
   <footer>
     &copy; 2025 F1 Fan Zone | Segurança e diversão garantida.
@@ -151,5 +238,6 @@
       document.getElementById('form-cadastro').style.display = 'block';
     }
   </script>
+
 </body>
 </html>
