@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -11,6 +11,7 @@
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: 'Orbitron', sans-serif;
     }
+
     body {
       background-color: #0e0e0e;
       color: #fff;
@@ -19,6 +20,7 @@
       flex-direction: column;
       align-items: center;
     }
+
     header {
       background-color: #d90429;
       width: 100%;
@@ -26,11 +28,12 @@
       text-align: center;
       box-shadow: 0 4px 6px #a70010;
     }
+
     header h1 {
       font-size: 2.8rem;
-      letter-spacing: 2px;
       text-shadow: 2px 2px 5px #3b0000;
     }
+
     nav {
       margin-top: 15px;
       background: #1a1a1a;
@@ -41,6 +44,7 @@
       padding: 15px 0;
       box-shadow: inset 0 -2px 5px #ff453a44;
     }
+
     nav a {
       color: #f1f1f1;
       text-decoration: none;
@@ -51,127 +55,93 @@
       border-radius: 6px;
       transition: all 0.3s ease;
     }
+
     nav a:hover {
       border-color: #ff453a;
       background-color: #ff453a11;
       color: #ff453a;
     }
+
     main {
       max-width: 1000px;
       padding: 40px 20px;
       flex-grow: 1;
       width: 100%;
     }
-    section {
-      margin-bottom: 60px;
-    }
+
     h2 {
       color: #ff453a;
       font-size: 2rem;
-      margin-bottom: 20px;
       border-bottom: 2px solid #ff453a;
       padding-bottom: 8px;
+      margin-bottom: 20px;
     }
+
     p {
       line-height: 1.6;
-      margin-bottom: 16px;
       color: #ddd;
+      margin-bottom: 16px;
       font-size: 1.05rem;
     }
+
+    .circuit {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 69, 58, 0.7);
+    }
+
     .btn {
-      display: inline-block;
       background-color: #ff453a;
-      color: #fff;
-      font-weight: 700;
+      color: white;
       padding: 14px 26px;
       border-radius: 8px;
       text-decoration: none;
-      box-shadow: 0 4px 10px #ff453aaa;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      margin-top: 20px;
+      font-weight: bold;
+      display: inline-block;
+      transition: transform .3s ease;
     }
     .btn:hover {
-      background-color: #d3372b;
       transform: scale(1.05);
     }
-    ul {
-      margin-left: 20px;
-      color: #eee;
-    }
-    ul li {
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
+
     footer {
       width: 100%;
       padding: 18px 0;
       background: #1a1a1a;
-      text-align: center;
       color: #888;
-      font-size: 0.9rem;
+      text-align: center;
+      font-size: .9rem;
       box-shadow: inset 0 2px 5px #ff453a44;
     }
-    .circuit {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 69, 58, 0.7);
+
+  
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+    }
+
+   
+    @media print {
+      header, nav, footer, .btn {
+        display: none !important;
+      }
+      body {
+        background: #fff !important;
+        color: #000;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>F1 Fan Zone - Bem-vindo ao universo da Fórmula 1</h1>
-  </header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="ranking.html">Ranking</a>
-    <a href="cadastro.html">Cadastre-se</a>
-    <a href="cadastro.html">Área do Fã</a>
-    <a href="https://www.formula1.com/" target="_blank" rel="noopener noreferrer">Site Oficial</a>
-    <a href="noticias.html">Notícias</a>
-  </nav>
-
-  <main>
-    <section>
-      <h2>Sobre a Fórmula 1</h2>
-      <p>A Fórmula 1 é a categoria máxima do automobilismo mundial, onde a velocidade, tecnologia e estratégia se unem para criar um espetáculo global. A cada temporada, equipes e pilotos se enfrentam em circuitos lendários ao redor do mundo.</p>
-      <p>Seja você um fã veterano ou um novo entusiasta, aqui encontrará informações atualizadas, curiosidades, história e análises para mergulhar de cabeça no mundo da F1.</p>
-      <img src="circuito.png" alt="Circuito de Mônaco" class="circuit" />
-      <p>O circuito de Mônaco é um dos mais icônicos da categoria, conhecido por suas curvas estreitas e a atmosfera única do Principado.</p>
-    </section>
-
-      <div style="display: flex; justify-content: center;"> 
-      <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.8638355354933!2d7.419171476655705!3d43.73415544719045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdc3005bd9bc7f%3A0xc23c85e779aac89e!2sMonaco%20Circuit!5e0!3m2!1spt-BR!2sbr!4v1749599487851!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div><br><br>
-
-    <section>
-      <h2>Como navegar pelo site</h2>
-      <ul>
-        <li><strong>Ranking:</strong> Acompanhe a classificação atual dos pilotos e equipes.</li>
-        <li><strong>Cadastro:</strong> Faça seu cadastro para ter acesso exclusivo à Área do Fã.</li>
-        <li><strong>Área do Fã:</strong> Conteúdo especial, notícias exclusivas e participação em fóruns.</li>
-        <li><strong>Site Oficial:</strong> Visite o site oficial da Fórmula 1 para informações completas.</li>
-      </ul>
-      <a href="cadastro.html" class="btn">Cadastre-se para acessar a Área do Fã</a>
-    </section>
-      
-    <section>
-      <h2>Curiosidades da Fórmula 1</h2>
-      <ul>
-        <li>A maior velocidade já registrada em um GP foi de 372.6 km/h.</li>
-        <li>A corrida mais longa da história da F1 aconteceu em 2011, durando quase 5 horas.</li>
-        <li>O piloto com mais títulos mundiais é Michael Schumacher, com 7.</li>
-        <li>A F1 começou oficialmente em 1950, e desde então evoluiu muito em segurança e tecnologia.</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 F1 Fan Zone | Feito por fãs, para fãs. 🏁
-  </footer>
 </body>
 </html>
