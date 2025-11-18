@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -103,6 +103,7 @@
       display: inline-block;
       transition: transform .3s ease;
     }
+
     .btn:hover {
       transform: scale(1.05);
     }
@@ -117,7 +118,6 @@
       box-shadow: inset 0 2px 5px #ff453a44;
     }
 
-  
     @media (max-width: 480px) {
       header h1 {
         font-size: 1.8rem;
@@ -128,7 +128,6 @@
       }
     }
 
-   
     @media print {
       header, nav, footer, .btn {
         display: none !important;
@@ -142,6 +141,49 @@
 </head>
 
 <body>
+
+  <header>
+    <h1>F1 Fan Zone</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="pilotos.html">Pilotos</a>
+    <a href="equipes.html">Equipes</a>
+    <a href="calendario.html">Calendário</a>
+    <a href="historia.html">História</a>
+  </nav>
+
+  <main>
+    <h2>Bem-vindo à F1 Fan Zone</h2>
+    <p>
+      Aqui você encontra tudo sobre o universo da Fórmula 1: informações sobre pilotos,
+      equipes, circuitos, corridas e a história completa da categoria mais rápida do automobilismo.
+      Nosso objetivo é trazer conteúdo claro, moderno e visualmente impactante.
+    </p>
+
+    <p>
+      Navegue pelo menu acima e explore o mundo da F1 com um design inspirado no clima 
+      tecnológico e competitivo das pistas.
+    </p>
+
+    <img 
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Albert_Park_Circuit_2021.png/640px-Albert_Park_Circuit_2021.png" 
+      alt="Circuito da Austrália"
+      class="circuit"
+    >
+
+    <p>
+      Os circuitos da Fórmula 1 variam desde pistas tradicionais de rua até autódromos de alta tecnologia.
+      Cada traçado traz desafios únicos para os pilotos, combinando velocidade, estratégia e precisão.
+    </p>
+
+    <a href="calendario.html" class="btn">Ver Próximas Corridas</a>
+  </main>
+
+  <footer>
+    © 2025 F1 Fan Zone — Seu portal independente sobre Fórmula 1.
+  </footer>
 
 </body>
 </html>
