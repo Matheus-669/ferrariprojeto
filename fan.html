@@ -1,122 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Área do Fã - F1 Fan Zone</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.ico" sizes="16x16">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
-    }
-    body {
-      background-color: #111;
-      color: #fff;
-      min-height: 100vh;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    h1, h2 {
-      color: #ff453a;
-      margin-bottom: 20px;
-      text-align: center;
-      text-shadow: 1px 1px 10px #ff453aaa;
-    }
-    .welcome-msg {
-      text-align: center;
-      font-size: 1.3rem;
-      margin-bottom: 30px;
-      color: #ddd;
-    }
-    section {
-      margin-bottom: 50px;
-      background: #222;
-      padding: 25px 30px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px #ff453aaa;
-    }
-    ul {
-      list-style-type: disc;
-      margin-left: 25px;
-      color: #eee;
-      font-size: 1.1rem;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    a.btn {
-      display: inline-block;
-      background-color: #ff453a;
-      color: #fff;
-      font-weight: 700;
-      padding: 14px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 5px 15px #ff453aaa;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-      margin-top: 20px;
-    }
-    a.btn:hover {
-      background-color: #d3372b;
-      transform: scale(1.05);
-    }
-    footer {
-      text-align: center;
-      color: #888;
-      margin-top: 40px;
-      font-size: 0.9rem;
-    }
-    .news-list {
-      max-height: 180px;
-      overflow-y: auto;
-      padding-right: 10px;
-      border-right: 2px solid #ff453a;
-      margin-bottom: 15px;
-    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Orbitron',sans-serif}
+    :root{--bg:#111;--card:#1a1a1a;--accent:#ff453a}
+    body{background:var(--bg);color:#fff;min-height:100vh;padding:28px;display:flex;flex-direction:column;align-items:center}
+    header{width:100%;background:var(--accent);padding:18px;text-align:center;box-shadow:0 4px 6px #a70010}
+    header h1{font-size:1.8rem}
+    nav{width:100%;background:var(--card);display:flex;justify-content:center;gap:20px;padding:12px 0;box-shadow:inset 0 -2px 5px #ff453a44}
+    nav a{color:#f1f1f1;text-decoration:none;padding:8px 12px;border-radius:8px}
+    .container{width:100%;max-width:980px;margin-top:20px;display:grid;grid-template-columns:1fr 350px;gap:20px}
+    .panel{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+    .welcome{color:#ddd;margin-bottom:10px}
+    .news-list{max-height:220px;overflow:auto;padding-right:10px;border-right:2px solid #ff453a;margin-bottom:10px}
+    .news-list li{margin:10px 0;color:#eee}
+
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 6px 15px rgba(255,69,58,0.25)}
+    .btn:hover{transform:scale(1.03);transition:transform .18s}
+
+    /* audio player simples */
+    audio{width:100%;margin-top:10px;border-radius:8px;background:#000;padding:6px}
+
+    /* lista e tabela (exemplos) */
+    ul.fanlist{list-style:square;color:#ffb3a8;padding-left:18px}
+    table.ranktable{width:100%;border-collapse:collapse;margin-top:8px}
+    table.ranktable th, table.ranktable td{padding:8px;text-align:left;border-bottom:1px solid rgba(255,69,58,0.06);color:#ffb3a8}
+
+    /* responsive */
+    @media (max-width:900px){ .container{grid-template-columns:1fr} nav{flex-wrap:wrap} }
+    @media print{ nav, .btn{display:none} body{color:#000;background:#fff} }
   </style>
 </head>
 <body>
-  <h1>Bem-vindo à Área do Fã!</h1>
-  <p class="welcome-msg">Obrigado por se cadastrar. Aqui você tem acesso exclusivo a <a href="#ultimasnoticias" class="btn"> últimas notícias</a> , <a href="#quizrapido" class="btn">Quiz Rápido</a> , <a href="#forum" class="btn">Participe do Fórum</a> .</p>
+  <header><h1>Área do Fã - F1 Fan Zone</h1></header>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="noticias.html">Notícias</a>
+    <a href="ranking.html">Ranking</a>
+  </nav>
 
-  <section>
-    <h2 id="ultimasnoticias">Últimas Notícias</h2>
-    <div class="news-list">
-      <ul>
-        <li>Verstappen vence GP do Canadá em corrida emocionante!</li>
-        <li>Ferrari apresenta nova atualização para o carro 2025.</li>
-        <li>GP de Mônaco terá festa especial para fãs com acesso VIP.</li>
-        <li>Lewis Hamilton anuncia projeto para incentivar jovens pilotos.</li>
-        <li>Equipe Mercedes reforça parceria com tecnologia sustentável.</li>
-      </ul>
+  <div class="container">
+    <div class="panel">
+      <!-- mostra o nome vindo do cadastro (querystring) -->
+      <h2 style="color:var(--accent);margin-bottom:8px">Bem-vindo, <span id="nomeExib" style="color:#fff">Fã</span>!</h2>
+      <p class="welcome">Obrigado por se juntar à comunidade F1 Fan Zone. Aqui estão recursos e atividades exclusivas:</p>
+
+      <h3 id="ultimas">Últimas notícias</h3>
+      <div class="news-list">
+        <ul>
+          <li>Verstappen vence GP do Canadá em corrida emocionante.</li>
+          <li>Ferrari apresenta atualização aerodinâmica.</li>
+          <li>GP de Mônaco lança eventos para fãs VIP.</li>
+          <li>Mercedes testa soluções para pit stops mais rápidos.</li>
+        </ul>
+      </div>
+
+      <a class="btn" href="noticias.html#principais">Todas as notícias</a>
+      <p style="margin-top:12px;color:#ccc;font-size:0.95rem">Curta um som enquanto navega:</p>
+
+      <!-- áudio (exemplo online público) -->
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Seu navegador não suporta a tag de áudio.
+      </audio>
     </div>
-    <a href="ranking.html" class="btn">Confira o Ranking Atual</a>
-  </section>
 
-  <section>
-    <h2 id="quizrapido">Quiz Rápido</h2>
-    <p>Teste seus conhecimentos sobre Fórmula 1!</p>
-    <ol>
-      <li>Quem detém o recorde de mais campeonatos mundiais?</li>
-      <li>Qual foi o primeiro GP da temporada 2025?</li>
-      <li>Qual piloto é conhecido como "The Iceman"?</li>
-      <li>Qual equipe venceu o campeonato de construtores em 2024?</li>
-      <li>Em qual circuito ocorre o GP de Mônaco?</li>
-    </ol>
-    <a href="https://www.formula1.com/en/toolbar/quiz.html" target="_blank" rel="noopener noreferrer" class="btn">Responder Quiz Oficial</a>
-  </section>
+    <aside class="panel">
+      <h3 style="color:var(--accent)">Painel Rápido</h3>
+      <p class="welcome-msg" style="color:#ddd">Acesse rápido:</p>
+      <ul class="fanlist">
+        <li><a style="color:#ffb3a8;text-decoration:none" href="ranking.html">Ver ranking atualizado</a></li>
+        <li><a style="color:#ffb3a8;text-decoration:none" href="cadastro.html">Editar cadastro</a></li>
+        <li><a style="color:#ffb3a8;text-decoration:none" href="https://www.reddit.com/r/formula1/" target="_blank" rel="noopener">Fórum recomendado</a></li>
+      </ul>
 
-  <section>
-    <h2 id="forum">Participe do Fórum</h2>
-    <p>Troque ideias, compartilhe palpites e faça amigos que também amam a Fórmula 1.</p>
-    <a href="https://www.reddit.com/r/formula1/" target="_blank" rel="noopener noreferrer" class="btn">Entrar no Fórum do Reddit F1</a>
-  </section>
+      <h4 style="color:var(--accent);margin-top:12px">Top Pilotos</h4>
+      <table class="ranktable">
+        <thead><tr><th>Piloto</th><th>Pontos</th></tr></thead>
+        <tbody>
+          <tr><td>Max Verstappen</td><td>320</td></tr>
+          <tr><td>Lewis Hamilton</td><td>278</td></tr>
+        </tbody>
+      </table>
+    </aside>
+  </div>
 
-  <footer>
-    &copy; 2025 F1 Fan Zone | Conteúdo exclusivo para fãs cadastrados.
-  </footer>
+  <footer style="margin-top:18px;color:#aaa">© 2025 F1 Fan Zone — Área exclusiva</footer>
+
+  <script>
+    // Pega o nome da querystring e exibe (simples, sem backend)
+    function getQueryParam(key){
+      const params = new URLSearchParams(location.search);
+      return params.get(key);
+    }
+    const nome = getQueryParam('nome');
+    if(nome){
+      document.getElementById('nomeExib').textContent = decodeURIComponent(nome);
+    }
+  </script>
 </body>
 </html>
